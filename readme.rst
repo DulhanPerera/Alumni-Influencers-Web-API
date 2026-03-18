@@ -1,71 +1,37 @@
-###################
-What is CodeIgniter
-###################
+API-Based Bidding System (CodeIgniter)
 
-CodeIgniter is an Application Development Framework - a toolkit - for people
-who build web sites using PHP. Its goal is to enable you to develop projects
-much faster than you could if you were writing code from scratch, by providing
-a rich set of libraries for commonly needed tasks, as well as a simple
-interface and logical structure to access these libraries. CodeIgniter lets
-you creatively focus on your project by minimizing the amount of code needed
-for a given task.
+This project is a web-based API system developed using the CodeIgniter PHP framework. The system is designed to manage users, profiles, and bidding activities through a structured backend architecture.
 
-*******************
-Release Information
-*******************
+The application follows the MVC (Model-View-Controller) pattern and provides RESTful API functionality for handling core operations such as user management, bid submissions, and secure API access using API keys.
 
-This repo contains in-development code for future releases. To download the
-latest stable release please visit the `CodeIgniter Downloads
-<https://codeigniter.com/download>`_ page.
+Key Features:
+- User management system with role-based access
+- Profile management (one-to-one relationship with users)
+- Bidding system where users can place multiple bids
+- API key management for secure access to endpoints
+- Database migrations for structured and version-controlled schema design
+- Scalable backend architecture suitable for future enhancements
 
-**************************
-Changelog and New Features
-**************************
+Technologies Used:
+- PHP (CodeIgniter Framework)
+- MySQL Database
+- XAMPP (Apache Server)
+- Git & GitHub for version control
 
-You can find a list of all changes for each release in the `user
-guide change log <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/changelog.rst>`_.
+Database Design:
+- users (1) → (1) profiles
+- users (1) → (M) bids
+- users (1) → (M) api_keys
 
-*******************
-Server Requirements
-*******************
+Purpose of the Project:
+This coursework aims to demonstrate the development of a backend API system using modern web development practices. It focuses on database design, API development, and implementing relationships between entities while following industry standards.
 
-PHP version 5.6 or newer is recommended.
+Setup Instructions:
+1. Clone the repository
+2. Place the project in the htdocs folder (XAMPP)
+3. Configure database settings in the environment file
+4. Create the database in phpMyAdmin
+5. Run the application using localhost
 
-It should work on 5.4.8 as well, but we strongly advise you NOT to run
-such old versions of PHP, because of potential security and performance
-issues, as well as missing features.
-
-************
-Installation
-************
-
-Please see the `installation section <https://codeigniter.com/userguide3/installation/index.html>`_
-of the CodeIgniter User Guide.
-
-*******
-License
-*******
-
-Please see the `license
-agreement <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/license.rst>`_.
-
-*********
-Resources
-*********
-
--  `User Guide <https://codeigniter.com/userguide3/>`_
--  `Contributing Guide <https://github.com/bcit-ci/CodeIgniter/blob/develop/contributing.md>`_
--  `Language File Translations <https://github.com/bcit-ci/codeigniter3-translations>`_
--  `Community Forums <https://forum.codeigniter.com/>`_
--  `Community Wiki <https://github.com/bcit-ci/CodeIgniter/wiki>`_
--  `Community Slack Channel <https://codeigniterchat.slack.com>`_
-
-Report security issues to our `Security Panel <mailto:security@codeigniter.com>`_
-or via our `page on HackerOne <https://hackerone.com/codeigniter>`_, thank you.
-
-***************
-Acknowledgement
-***************
-
-The CodeIgniter team would like to thank EllisLab, all the
-contributors to the CodeIgniter project and you, the CodeIgniter user.
+Status:
+Project is currently under development.
